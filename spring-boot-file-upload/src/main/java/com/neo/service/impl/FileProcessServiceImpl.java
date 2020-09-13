@@ -20,7 +20,6 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.*;
-import java.util.concurrent.atomic.AtomicLong;
 import java.util.concurrent.atomic.LongAdder;
 
 /**
@@ -70,7 +69,6 @@ public class FileProcessServiceImpl implements FileProcessService {
     }
 
 
-    @Slf4j
     class HandUpTaskExecutor implements Callable {
         private ArrayBlockingQueue<String> arrayQueue;
         private CountDownLatch countDownLatch;
